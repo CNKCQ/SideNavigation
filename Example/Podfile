@@ -1,0 +1,12 @@
+use_frameworks!
+
+target 'SlideMenu_Example' do
+  pod 'SlideMenu', :path => '../'
+  pod 'SnapKit'
+
+  target 'SlideMenu_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
