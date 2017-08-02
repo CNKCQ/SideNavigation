@@ -3,8 +3,10 @@
 
 target 'SideNavigation-Objective-C' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  use_frameworks!
+    use_frameworks!
 
-  pod "SideNavigation"
+    pod "SideNavigation", :git => 'https://github.com/CNKCQ/SideNavigation.git'
+    pod 'MLeaksFinder'
+
 
 end

@@ -6,15 +6,14 @@
 //  Copyright © 2017年 Jack. All rights reserved.
 //
 
-@objc
-enum Direction: NSInteger {
-    case left = 0
-    case right = 1
+enum Direction {
+    case left
+    case right
 }
 
 public class SideMenuManager: NSObject {
-    var viewController: UIViewController!
-    var presentController: UIViewController!
+    weak var viewController: UIViewController!
+    weak var presentController: UIViewController!
     var presentInteractor: PercentDrivenInteractiveTransition!
     var dismissInteractor: PercentDrivenInteractiveTransition!
     var direction: Direction = .left

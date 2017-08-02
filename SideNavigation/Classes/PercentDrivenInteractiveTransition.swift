@@ -8,8 +8,8 @@
 
 
 class PercentDrivenInteractiveTransition: UIPercentDrivenInteractiveTransition {
-    var viewController: UIViewController!
-    var presentViewController: UIViewController?
+    weak var viewController: UIViewController!
+    weak var presentViewController: UIViewController?
     var shouldComplete: Bool = false
     var isInteractiveTransition = false
     var direction: Direction = .left
