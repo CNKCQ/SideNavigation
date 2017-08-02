@@ -1,16 +1,19 @@
 PODS:
-  - SideNavigation (0.1.0)
+  - SideNavigation (1.0.3)
+  - SnapKit (3.2.0)
 
 DEPENDENCIES:
   - SideNavigation (from `../`)
+  - SnapKit
 
 EXTERNAL SOURCES:
   SideNavigation:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SideNavigation: 35772e26481314f432db3645b815c297a8a489a6
+  SideNavigation: 8b1b9c84e2405b0825fcc600617da08b60d651d1
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: 18850af23a00d90a1949e13810a858831d2ad306
+PODFILE CHECKSUM: c70ff9bb2da2a0aa343b7f2134300e07dc67de3d
 
 COCOAPODS: 1.2.1

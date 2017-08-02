@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class RightViewController: UIViewController {
     var tableView: UITableView!
@@ -21,17 +22,12 @@ class RightViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         view.addSubview(tableView)
+        tableView.snp.makeConstraints { (make) in
+            make.edges.equalTo(self.view)
+        }
         let headerView = UIView(frame: CGRect(origin: .zero, size: CGSize(width: 0, height: 180)))
         headerView.backgroundColor = .blue
         tableView.tableHeaderView = headerView
-    }
-
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        var frame = self.view.frame
-        frame.origin.x = 0
-        self.tableView.frame = frame
-        self.view.layoutIfNeeded()
     }
 
     func startdismiss()  {
