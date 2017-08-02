@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint SlideMenu.podspec' to ensure this is a
+# Be sure to run `pod lib lint SideNavigation.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'SideMenu'
-  s.version          = '1.0.2'
-  s.summary          = 'A short description of SlideMenu.'
+  s.name             = 'SideNavigation'
+  s.version          = '0.1.0'
+  s.summary          = 'A short description of SideNavigation.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,21 +21,22 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/cnkcq/SideMenu'
+  s.homepage         = 'https://github.com/wangchengqvan@gmail.com/SideNavigation'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'cnkcq' => 'wangchengqvan@gmail.com' }
-  s.source           = { :git => 'https://github.com/cnkcq/SideMenu.git', :tag => s.version.to_s }
+  s.author           = { 'wangchengqvan@gmail.com' => 'chengquan.wang@ele.me' }
+  s.source           = { :git => 'https://github.com/wangchengqvan@gmail.com/SideNavigation.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'SideMenu/Classes/**/*'
+  s.source_files = 'SideNavigation/Classes/**/*'
   
   # s.resource_bundles = {
-  #   'SlideMenu' => ['SideMenu/Assets/*.png']
+  #   'SideNavigation' => ['SideNavigation/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit'
+  # s.frameworks = 'UIKit', 'MapKit'
+  # s.dependency 'AFNetworking', '~> 2.3'
 end

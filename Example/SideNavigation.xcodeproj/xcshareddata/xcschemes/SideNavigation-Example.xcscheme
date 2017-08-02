@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "SlideMenu_Example.app"
-               BlueprintName = "SlideMenu_Example"
-               ReferencedContainer = "container:SlideMenu.xcodeproj">
+               BuildableName = "SideNavigation_Example.app"
+               BlueprintName = "SideNavigation_Example"
+               ReferencedContainer = "container:SideNavigation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "SlideMenu_Tests.xctest"
-               BlueprintName = "SlideMenu_Tests"
-               ReferencedContainer = "container:SlideMenu.xcodeproj">
+               BuildableName = "SideNavigation_Tests.xctest"
+               BlueprintName = "SideNavigation_Tests"
+               ReferencedContainer = "container:SideNavigation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "SlideMenu_Tests.xctest"
-               BlueprintName = "SlideMenu_Tests"
-               ReferencedContainer = "container:SlideMenu.xcodeproj">
+               BuildableName = "SideNavigation_Tests.xctest"
+               BlueprintName = "SideNavigation_Tests"
+               ReferencedContainer = "container:SideNavigation.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "SlideMenu_Example.app"
-            BlueprintName = "SlideMenu_Example"
-            ReferencedContainer = "container:SlideMenu.xcodeproj">
+            BuildableName = "SideNavigation_Example.app"
+            BlueprintName = "SideNavigation_Example"
+            ReferencedContainer = "container:SideNavigation.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "SlideMenu_Example.app"
-            BlueprintName = "SlideMenu_Example"
-            ReferencedContainer = "container:SlideMenu.xcodeproj">
+            BuildableName = "SideNavigation_Example.app"
+            BlueprintName = "SideNavigation_Example"
+            ReferencedContainer = "container:SideNavigation.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -99,9 +99,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "SlideMenu_Example.app"
-            BlueprintName = "SlideMenu_Example"
-            ReferencedContainer = "container:SlideMenu.xcodeproj">
+            BuildableName = "SideNavigation_Example.app"
+            BlueprintName = "SideNavigation_Example"
+            ReferencedContainer = "container:SideNavigation.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
