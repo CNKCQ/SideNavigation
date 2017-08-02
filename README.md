@@ -1,9 +1,9 @@
-# SlideMenu
+# SideMenu
 
-[![CI Status](http://img.shields.io/travis/wangchengqvan@gmail.com/SlideMenu.svg?style=flat)](https://travis-ci.org/wangchengqvan@gmail.com/SlideMenu)
-[![Version](https://img.shields.io/cocoapods/v/SlideMenu.svg?style=flat)](http://cocoapods.org/pods/SlideMenu)
-[![License](https://img.shields.io/cocoapods/l/SlideMenu.svg?style=flat)](http://cocoapods.org/pods/SlideMenu)
-[![Platform](https://img.shields.io/cocoapods/p/SlideMenu.svg?style=flat)](http://cocoapods.org/pods/SlideMenu)
+[![CI Status](http://img.shields.io/travis/wangchengqvan@gmail.com/SideMenu.svg?style=flat)](https://travis-ci.org/wangchengqvan@gmail.com/SideMenu)
+[![Version](https://img.shields.io/cocoapods/v/SideMenu.svg?style=flat)](http://cocoapods.org/pods/SideMenu)
+[![License](https://img.shields.io/cocoapods/l/SideMenu.svg?style=flat)](http://cocoapods.org/pods/SideMenu)
+[![Platform](https://img.shields.io/cocoapods/p/SideMenu.svg?style=flat)](http://cocoapods.org/pods/SideMenu)
 
 ## Example
 
@@ -13,7 +13,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-SlideMenu is available through [CocoaPods](http://cocoapods.org). To install
+SideMenu is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
@@ -26,4 +26,4 @@ wangchengqvan@gmail.com, chengquan.wang@ele.me
 
 ## License
 
-SlideMenu is available under the MIT license. See the LICENSE file for more info.
+SideMenu is available under the MIT license. See the LICENSE file for more info.
