@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7B86B07A00FAF211DB75A2D5 /* Pods_SideNavigation_Objective_C.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24802977DDF240D079900C70 /* Pods_SideNavigation_Objective_C.framework */; };
+		AA1A9F5D1F35DB6500CF165F /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1A9F5C1F35DB6500CF165F /* TestViewController.m */; };
 		AA25D7F81F322DCF00EDE0E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA25D7F71F322DCF00EDE0E2 /* main.m */; };
 		AA25D7FB1F322DCF00EDE0E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA25D7FA1F322DCF00EDE0E2 /* AppDelegate.m */; };
 		AA25D8011F322DCF00EDE0E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA25D7FF1F322DCF00EDE0E2 /* Main.storyboard */; };
@@ -21,6 +22,8 @@
 /* Begin PBXFileReference section */
 		047850881AE28E9F740B64EE /* Pods-SideNavigation-Objective-C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SideNavigation-Objective-C.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SideNavigation-Objective-C/Pods-SideNavigation-Objective-C.debug.xcconfig"; sourceTree = "<group>"; };
 		24802977DDF240D079900C70 /* Pods_SideNavigation_Objective_C.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SideNavigation_Objective_C.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA1A9F5B1F35DB6500CF165F /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		AA1A9F5C1F35DB6500CF165F /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		AA25D7F31F322DCF00EDE0E2 /* SideNavigation-Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SideNavigation-Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA25D7F71F322DCF00EDE0E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AA25D7F91F322DCF00EDE0E2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 				AA25D8121F322E7400EDE0E2 /* ViewController.m */,
 				AA25D7F91F322DCF00EDE0E2 /* AppDelegate.h */,
 				AA25D7FA1F322DCF00EDE0E2 /* AppDelegate.m */,
+				AA1A9F5B1F35DB6500CF165F /* TestViewController.h */,
+				AA1A9F5C1F35DB6500CF165F /* TestViewController.m */,
 				AA25D7FF1F322DCF00EDE0E2 /* Main.storyboard */,
 				AA25D8021F322DCF00EDE0E2 /* Assets.xcassets */,
 				AA25D8041F322DCF00EDE0E2 /* LaunchScreen.storyboard */,
@@ -236,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA1A9F5D1F35DB6500CF165F /* TestViewController.m in Sources */,
 				AA25D8131F322E7400EDE0E2 /* LeftViewController.m in Sources */,
 				AA25D8141F322E7400EDE0E2 /* RightViewController.m in Sources */,
 				AA25D7FB1F322DCF00EDE0E2 /* AppDelegate.m in Sources */,
@@ -403,6 +409,7 @@
 				AA25D80C1F322DCF00EDE0E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

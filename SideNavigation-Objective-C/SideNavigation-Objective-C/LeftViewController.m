@@ -24,6 +24,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)dealloc {
+    NSLog(@"%@",  NSStringFromClass([self class]));
+}
+
 /*
 #pragma mark - Navigation
 

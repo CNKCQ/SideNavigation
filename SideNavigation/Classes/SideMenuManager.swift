@@ -72,28 +72,16 @@ extension SideMenuManager: UIViewControllerTransitioningDelegate {
     }
 
     public func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        if self.dismissInteractor.isInteractiveTransition {
-            return self.dismissInteractor
-        } else {
-            return nil
-        }
+        return self.dismissInteractor.isInteractiveTransition ? self.dismissInteractor : nil
     }
 
     public func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        if self.presentInteractor.isInteractiveTransition {
-            return self.presentInteractor
-        } else {
-            return nil
-        }
+        return self.presentInteractor.isInteractiveTransition ? self.presentInteractor : nil
     }
 }
 
 extension SideMenuManager: UIAdaptivePresentationControllerDelegate {
     public func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        if self.viewController.traitCollection.verticalSizeClass == .compact {
-            return .overFullScreen
-        } else {
-            return .none
-        }
+        return self.viewController.traitCollection.verticalSizeClass == .compact ? .overFullScreen : .none
     }
 }

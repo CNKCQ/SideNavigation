@@ -25,11 +25,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor whiteColor];
     _left = [LeftViewController new];
+    _leftSide = [[SideMenuManager alloc] init:self left:_left];
     _right = [RightViewController new];
-    self.leftSide = [[SideMenuManager alloc] init:self left:_left];
-    self.rightSide = [[SideMenuManager alloc] init:self right:_right];
+    _rightSide = [[SideMenuManager alloc] init:self right:_right];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -46,11 +46,17 @@
     [self presentViewController:_right animated:YES completion:nil];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
+- (void)dealloc {
+    NSLog(@"%@",  NSStringFromClass([self class]));
+}
 
 @end

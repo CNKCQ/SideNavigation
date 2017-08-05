@@ -1,33 +1,35 @@
 //
-//  RightViewController.m
+//  TestViewController.m
 //  SideNavigation-Objective-C
 //
-//  Created by Steve on 2017/8/2.
+//  Created by Steve on 2017/8/5.
 //  Copyright © 2017年 Jack. All rights reserved.
 //
 
-#import "RightViewController.h"
+#import "TestViewController.h"
+#import "ViewController.h"
 
-@interface RightViewController ()
+@interface TestViewController ()
 
 @end
 
-@implementation RightViewController
+@implementation TestViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = [UIColor brownColor];
+
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self presentViewController:[ViewController new] animated:YES completion:nil];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (void)dealloc {
-    NSLog(@"%@",  NSStringFromClass([self class]));
-}
-
 
 /*
 #pragma mark - Navigation

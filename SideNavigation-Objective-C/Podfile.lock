@@ -14,7 +14,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   SideNavigation:
-    :commit: 72d00a04989a7e1087a71545fb6de6357fd79149
+    :commit: ad7c6fee1d03e3d5722ecf2aa8b70826d4fb339f
     :git: https://github.com/CNKCQ/SideNavigation.git
 
 SPEC CHECKSUMS:
