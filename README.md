@@ -5,6 +5,13 @@
 [![License](https://img.shields.io/cocoapods/l/SideNavigation.svg?style=flat)](http://cocoapods.org/pods/SideNavigation)
 [![Platform](https://img.shields.io/cocoapods/p/SideNavigation.svg?style=flat)](http://cocoapods.org/pods/SideNavigation)
 
+## Features
+
+- [x] A Side menu.
+- [x] Draggable.
+- [x] ipad support.
+- [x] Independent components.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -21,7 +28,10 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "SideNavigation"
 ```
-
+## Usage
+Please see [example](https://github.com/CNKCQ/SideNavigation/tree/master/Example) or [Objective-C example](https://github.com/CNKCQ/SideNavigation/tree/master/SideNavigation-Objective-C)
+## Welcome
+Welcome to contribute 
 ## Author
 
 wangchengqvan@gmail.com, chengquan.wang@ele.me
