@@ -6,8 +6,9 @@
 //  Copyright © 2017年 Jack. All rights reserved.
 //
 
+import UIKit
 
-class PercentDrivenInteractiveTransition: UIPercentDrivenInteractiveTransition {
+class PercentDrivenInteractiveTransition: UIPercentDrivenInteractiveTransition, UIGestureRecognizerDelegate {
     var viewController: UIViewController!
     var presentViewController: UIViewController?
     var shouldComplete: Bool = false
@@ -22,13 +23,15 @@ class PercentDrivenInteractiveTransition: UIPercentDrivenInteractiveTransition {
         if self.presentViewController != nil {
             switch self.direction {
             case .left:
-                let dgeEPanGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(onPan(sender:)))
-                dgeEPanGesture.edges = .left
-                self.viewController.view.addGestureRecognizer(dgeEPanGesture)
+                let edgePanGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(onPan(sender:)))
+                edgePanGesture.edges = .left
+                edgePanGesture.delegate = self
+                self.viewController.view.addGestureRecognizer(edgePanGesture)
             case .right:
-                let dgeEPanGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(onPan(sender:)))
-                dgeEPanGesture.edges = .right
-                self.viewController.view.addGestureRecognizer(dgeEPanGesture)
+                let edgePanGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(onPan(sender:)))
+                edgePanGesture.edges = .right
+                edgePanGesture.delegate = self
+                self.viewController.view.addGestureRecognizer(edgePanGesture)
                 break
             }
         } else {
@@ -39,8 +42,11 @@ class PercentDrivenInteractiveTransition: UIPercentDrivenInteractiveTransition {
         }
     }
 
-    private override init() {
-        super.init()
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if let nav = viewController as? UINavigationController {
+            return nav.viewControllers.count < 2
+        }
+        return true
     }
 
     func onPan(sender: UIPanGestureRecognizer) {
@@ -78,5 +84,9 @@ class PercentDrivenInteractiveTransition: UIPercentDrivenInteractiveTransition {
         default:
             break
         }
+    }
+
+    private override init() {
+        super.init()
     }
 }

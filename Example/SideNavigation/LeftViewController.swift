@@ -31,7 +31,7 @@ class LeftViewController: UIViewController {
     }
 
     func startdismiss()  {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: false, completion: nil)
     }
 }
 
