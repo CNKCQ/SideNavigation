@@ -7,10 +7,9 @@
 //
 
 
-@objc
-enum TransitioningType: NSInteger {
-    case present = 0
-    case dismiss = 1
+enum TransitioningType {
+    case present
+    case dismiss
 }
 
 let kAnimationDuration: TimeInterval = 0.4
