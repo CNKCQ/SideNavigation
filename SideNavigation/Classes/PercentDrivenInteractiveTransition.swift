@@ -44,6 +44,8 @@ class PercentDrivenInteractiveTransition: UIPercentDrivenInteractiveTransition, 
     }
 
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+
+        /// to avoid the interactivePopGestureRecognizer of UINavigationController
         if let nav = viewController as? UINavigationController {
             return nav.viewControllers.count < 2
         }
