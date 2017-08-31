@@ -221,10 +221,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = GTVM2F95ZD;
 						LastSwiftMigration = 0820;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = GTVM2F95ZD;
 						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -504,6 +506,7 @@
 			baseConfigurationReference = 560C7E285395390DE8BBB80F /* Pods-SideNavigation_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GTVM2F95ZD;
 				INFOPLIST_FILE = SideNavigation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -518,6 +521,7 @@
 			baseConfigurationReference = A5AA5B3905617346F9C36EAF /* Pods-SideNavigation_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GTVM2F95ZD;
 				INFOPLIST_FILE = SideNavigation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -531,6 +535,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF5B0480061B6E648577CC60 /* Pods-SideNavigation_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = GTVM2F95ZD;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -551,6 +556,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D2EB3405D08B929B948A5F0B /* Pods-SideNavigation_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = GTVM2F95ZD;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

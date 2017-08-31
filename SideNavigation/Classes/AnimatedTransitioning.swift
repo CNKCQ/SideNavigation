@@ -37,7 +37,7 @@ extension AnimatedTransitioning: UIViewControllerAnimatedTransitioning {
     }
 
     func animatePresenting(in transitionContext: UIViewControllerContextTransitioning, to: UIViewController, from: UIViewController) {
-        let fromRect = transitionContext.initialFrame(for: from)
+        var fromRect = transitionContext.initialFrame(for: from)
         var toRect = fromRect
         switch direction {
         case .left:
@@ -46,6 +46,10 @@ extension AnimatedTransitioning: UIViewControllerAnimatedTransitioning {
             toRect.origin.x = toRect.width / 3 * 2
         }
         to.view.frame = toRect
+        if #available(iOS 11, *) {
+            // it's maybe a bug of iOS 11, it should be checked some time
+            fromRect = CGRect(x: fromRect.minX - (toRect.width / 3)/2, y: fromRect.minY, width: fromRect.width, height: fromRect.height)
+        }
         transitionContext.containerView.addSubview(to.view)
         UIView.animate(withDuration: kAnimationDuration, animations: {
             to.view.frame = fromRect
