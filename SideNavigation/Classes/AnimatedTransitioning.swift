@@ -37,13 +37,21 @@ extension AnimatedTransitioning: UIViewControllerAnimatedTransitioning {
     }
 
     func animatePresenting(in transitionContext: UIViewControllerContextTransitioning, to: UIViewController, from: UIViewController) {
-        let fromRect = transitionContext.initialFrame(for: from)
+        var fromRect = transitionContext.initialFrame(for: from)
         var toRect = fromRect
         switch direction {
         case .left:
             toRect.origin.x = -toRect.width / 3 * 2 // for the edge panGesture
+            if #available(iOS 11, *) {
+                // it's maybe a bug of iOS 11, it should be checked some time
+                fromRect = CGRect(x: fromRect.minX - (toRect.width / 3)/2, y: fromRect.minY, width: fromRect.width, height: fromRect.height)
+            }
         case .right:
             toRect.origin.x = toRect.width / 3 * 2
+            if #available(iOS 11, *) {
+                // it's maybe a bug of iOS 11, it should be checked some time
+                fromRect = CGRect(x: fromRect.minX + (toRect.width / 3)/2, y: fromRect.minY, width: fromRect.width, height: fromRect.height)
+            }
         }
         to.view.frame = toRect
         transitionContext.containerView.addSubview(to.view)
