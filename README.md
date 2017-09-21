@@ -12,6 +12,9 @@
 - [x] ipad support.
 - [x] Independent components.
 
+## See
+![image.png](http://upload-images.jianshu.io/upload_images/121208-710ab9f57c187cb5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
