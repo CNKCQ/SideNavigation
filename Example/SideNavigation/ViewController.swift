@@ -42,11 +42,11 @@ class ViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "right", style: .plain, target: self, action: #selector(rightClick))
     }
 
-    func leftClick() {
+    @objc func leftClick() {
         self.present(self.leftViewController, animated: true, completion: nil)
     }
 
-    func rightClick() {
+    @objc func rightClick() {
         self.present(self.rightViewController, animated: true, completion: nil)
     }
 
