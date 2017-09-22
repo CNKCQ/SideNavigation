@@ -33,6 +33,12 @@ pod "SideNavigation"
 ```
 ## Usage
 Please see [example](https://github.com/CNKCQ/SideNavigation/tree/master/Example) or [Objective-C example](https://github.com/CNKCQ/SideNavigation/tree/master/SideNavigation-Objective-C)
+
+## AppStore
+<a target='_blank' href='https://itunes.apple.com/cn/app/feng-niao-shang-jia-ban/id1203543592?mt=8'>
+	<img src='http://ww2.sinaimg.cn/large/0060lm7Tgw1f1hgrs1ebwj308102q0sp.jpg' width='144' height='49'/>
+</a>
+
 ## Welcome
 Welcome to contribute 
 ## Author
