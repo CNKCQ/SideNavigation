@@ -22,6 +22,9 @@ class LeftViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         view.addSubview(tableView)
+        if #available(iOS 11, *) {
+            tableView.contentInsetAdjustmentBehavior = .never
+        }
         tableView.snp.makeConstraints { (make) in
             make.edges.equalTo(self.view)
         }

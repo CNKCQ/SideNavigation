@@ -52,7 +52,7 @@ class PercentDrivenInteractiveTransition: UIPercentDrivenInteractiveTransition, 
         return true
     }
 
-    func onPan(sender: UIPanGestureRecognizer) {
+    @objc func onPan(sender: UIPanGestureRecognizer) {
         let  translation = sender.translation(in: sender.view?.superview)
         switch sender.state {
         case .began:
