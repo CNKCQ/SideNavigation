@@ -11,6 +11,8 @@
 - [x] Draggable.
 - [x] ipad support.
 - [x] Independent components.
+##### :eyes: See also:
+![SideNavigation_display](https://thumbs.gfycat.com/MagnificentWhichFlyinglemur-size_restricted.gif)
 
 ## Example
 
