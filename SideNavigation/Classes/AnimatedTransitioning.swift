@@ -36,7 +36,7 @@ extension AnimatedTransitioning: UIViewControllerAnimatedTransitioning {
         }
     }
 
-    func animatePresenting(in transitionContext: UIViewControllerContextTransitioning, to: UIViewController, from: UIViewController) {
+    @objc func animatePresenting(in transitionContext: UIViewControllerContextTransitioning, to: UIViewController, from: UIViewController) {
         var fromRect = transitionContext.initialFrame(for: from)
         var toRect = fromRect
         switch direction {
@@ -66,7 +66,7 @@ extension AnimatedTransitioning: UIViewControllerAnimatedTransitioning {
         }
     }
 
-    func animateDismissing(in transitionContext: UIViewControllerContextTransitioning, to: UIViewController, from: UIViewController) {
+    @objc func animateDismissing(in transitionContext: UIViewControllerContextTransitioning, to: UIViewController, from: UIViewController) {
         var fromRect = transitionContext.initialFrame(for: from)
         switch direction {
         case .left:

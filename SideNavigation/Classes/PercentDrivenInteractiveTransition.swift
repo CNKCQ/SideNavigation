@@ -9,11 +9,11 @@
 import UIKit
 
 class PercentDrivenInteractiveTransition: UIPercentDrivenInteractiveTransition, UIGestureRecognizerDelegate {
-    weak var viewController: UIViewController!
-    weak var presentViewController: UIViewController?
+    @objc weak var viewController: UIViewController!
+    @objc weak var presentViewController: UIViewController?
 
-    var shouldComplete: Bool = false
-    var isInteractiveTransition = false
+    @objc var shouldComplete: Bool = false
+    @objc var isInteractiveTransition = false
     var direction: Direction = .left
 
     convenience init(_ viewController: UIViewController, with view: UIView?, present: UIViewController?, direction: Direction? = .left) {
