@@ -18,19 +18,26 @@ class LeftViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .brown
         tableView = UITableView()
+        tableView.backgroundColor = .purple
+        if #available(iOS 11, *) {
+            tableView.contentInsetAdjustmentBehavior = .never
+        }
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         view.addSubview(tableView)
-        if #available(iOS 11, *) {
-            tableView.contentInsetAdjustmentBehavior = .never
-        }
         tableView.snp.makeConstraints { (make) in
             make.edges.equalTo(self.view)
         }
-        let headerView = UIView(frame: CGRect(origin: .zero, size: CGSize(width: 0, height: 180)))
+        let headerView = UIView(frame: .zero)
         headerView.backgroundColor = .blue
         tableView.tableHeaderView = headerView
+        headerView.snp.makeConstraints { (make) in
+            make.top.equalTo(tableView.snp.top)
+            make.width.equalTo(tableView.snp.width)
+            make.height.equalTo(180)
+        }
+        headerView.superview?.layoutIfNeeded()
     }
 
     func startdismiss()  {
