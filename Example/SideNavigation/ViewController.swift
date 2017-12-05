@@ -26,7 +26,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Drawer"
         self.view.backgroundColor = .red
         self.leftViewController = LeftViewController()
         self.leftViewController.didselected = { [weak self]  (indexPath) in

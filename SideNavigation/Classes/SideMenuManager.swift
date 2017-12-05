@@ -12,13 +12,13 @@ enum Direction {
 }
 
 public class SideMenuManager: NSObject {
-    weak var viewController: UIViewController!
-    weak var presentController: UIViewController!
-    var presentInteractor: PercentDrivenInteractiveTransition!
-    var dismissInteractor: PercentDrivenInteractiveTransition!
+    @objc weak var viewController: UIViewController!
+    @objc weak var presentController: UIViewController!
+    @objc var presentInteractor: PercentDrivenInteractiveTransition!
+    @objc var dismissInteractor: PercentDrivenInteractiveTransition!
     var direction: Direction = .left
 
-    @discardableResult
+    @objc @discardableResult
     public convenience init(_ viewController: UIViewController, left: UIViewController) {
         self.init()
         self.viewController = viewController
@@ -27,7 +27,7 @@ public class SideMenuManager: NSObject {
         self.configPresent()
     }
 
-    @discardableResult
+    @objc @discardableResult
     public convenience init(_ viewController: UIViewController, right: UIViewController) {
         self.init()
         self.viewController = viewController
@@ -36,7 +36,7 @@ public class SideMenuManager: NSObject {
         self.configPresent()
     }
 
-    func configPresent() {
+    @objc func configPresent() {
         self.presentController?.transitioningDelegate = self
         self.presentController?.modalPresentationStyle = .custom
         self.presentInteractor = PercentDrivenInteractiveTransition(viewController, with: viewController.view, present: self.presentController, direction: self.direction)

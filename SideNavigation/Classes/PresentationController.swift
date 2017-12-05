@@ -59,7 +59,7 @@ class PresentationController: UIPresentationController {
         })
     }
 
-    lazy var dimmingView: UIView = {
+    @objc lazy var dimmingView: UIView = {
         let dimming = UIView()
         dimming.translatesAutoresizingMaskIntoConstraints = false
         dimming.backgroundColor = UIColor(white: 0.0, alpha: 0.5)

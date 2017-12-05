@@ -6,7 +6,7 @@ target 'SideNavigation-Objective-C' do
     use_frameworks!
 
     pod "SideNavigation", :git => 'https://github.com/CNKCQ/SideNavigation.git'
-#    pod 'MLeaksFinder'
+    pod 'MLeaksFinder'
 
 
 end
