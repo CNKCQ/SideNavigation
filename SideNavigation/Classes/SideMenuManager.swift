@@ -6,7 +6,7 @@
 //  Copyright © 2017年 Jack. All rights reserved.
 //
 
-enum Direction {
+public enum Direction {
     case left
     case right
 }
@@ -16,6 +16,8 @@ public class SideMenuManager: NSObject {
     @objc weak var presentController: UIViewController!
     @objc var presentInteractor: PercentDrivenInteractiveTransition!
     @objc var dismissInteractor: PercentDrivenInteractiveTransition!
+    public var sideScale: CGFloat = 1.0 / 3.0
+    public var animationDuration: TimeInterval = 0.4
     var direction: Direction = .left
 
     @objc @discardableResult
@@ -53,12 +55,14 @@ extension SideMenuManager: UIViewControllerTransitioningDelegate {
         let presentationController = PresentationController(presentedViewController: presented, presenting: presenting)
         presentationController.delegate = self
         presentationController.direction = direction
+        presentationController.sideScale = sideScale
         self.dismissInteractor = PercentDrivenInteractiveTransition(self.presentController, with: presentationController.dimmingView, present: nil, direction: self.direction)
         return presentationController
     }
 
     public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         let animator = AnimatedTransitioning()
+        animator.animationDuration = animationDuration
         animator.direction = direction
         animator.transitionType = .dismiss
         return animator
@@ -66,6 +70,7 @@ extension SideMenuManager: UIViewControllerTransitioningDelegate {
 
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         let animator = AnimatedTransitioning()
+        animator.animationDuration = animationDuration
         animator.direction = direction
         animator.transitionType = .present
         return animator

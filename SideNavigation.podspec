@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SideNavigation'
   s.version          = '1.1.3'
-  s.swift_version    = '3.2'
+  s.swift_version    = '5'
   s.summary          = 'A short description of SideNavigation.'
   s.homepage         = 'https://github.com/cnkcq/SideNavigation'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'

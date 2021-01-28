@@ -12,17 +12,16 @@ enum TransitioningType {
     case dismiss
 }
 
-let kAnimationDuration: TimeInterval = 0.4
-
 class AnimatedTransitioning: NSObject {
     var transitionType: TransitioningType = .present
     var direction: Direction = .left
+    var animationDuration: TimeInterval = 0.4
 }
 
 extension AnimatedTransitioning: UIViewControllerAnimatedTransitioning {
 
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return kAnimationDuration
+        return animationDuration
     }
 
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -37,25 +36,17 @@ extension AnimatedTransitioning: UIViewControllerAnimatedTransitioning {
     }
 
     @objc func animatePresenting(in transitionContext: UIViewControllerContextTransitioning, to: UIViewController, from: UIViewController) {
-        var fromRect = transitionContext.initialFrame(for: from)
-        var toRect = fromRect
+        let fromRect = transitionContext.initialFrame(for: from)
+        var toRect = transitionContext.initialFrame(for: from)
         switch direction {
         case .left:
-            toRect.origin.x = -toRect.width / 3 * 2 // for the edge panGesture
-            if #available(iOS 11, *) {
-                // it's maybe a bug of iOS 11, it should be checked some time
-                fromRect = CGRect(x: fromRect.minX - (toRect.width / 3)/2, y: fromRect.minY, width: fromRect.width, height: fromRect.height)
-            }
+            toRect.origin.x = -toRect.width
         case .right:
-            toRect.origin.x = toRect.width / 3 * 2
-            if #available(iOS 11, *) {
-                // it's maybe a bug of iOS 11, it should be checked some time
-                fromRect = CGRect(x: fromRect.minX + (toRect.width / 3)/2, y: fromRect.minY, width: fromRect.width, height: fromRect.height)
-            }
+            toRect.origin.x = toRect.width
         }
         to.view.frame = toRect
         transitionContext.containerView.addSubview(to.view)
-        UIView.animate(withDuration: kAnimationDuration, animations: {
+        UIView.animate(withDuration: animationDuration, animations: {
             to.view.frame = fromRect
         }) { (_) in
             if transitionContext.transitionWasCancelled {
@@ -74,7 +65,7 @@ extension AnimatedTransitioning: UIViewControllerAnimatedTransitioning {
         case .right:
             fromRect.origin.x = fromRect.width
         }
-        UIView.animate(withDuration: kAnimationDuration, animations: {
+        UIView.animate(withDuration: animationDuration, animations: {
             from.view.frame = fromRect
         }) { (_) in
             if transitionContext.transitionWasCancelled {

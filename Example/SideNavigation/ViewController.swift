@@ -14,11 +14,14 @@ class ViewController: UIViewController {
     var leftViewController: LeftViewController! {
         didSet {
             self.slideMenuManager1 = SideMenuManager(self, left: self.leftViewController)
+            self.slideMenuManager1.sideScale = 1.0 / 2.0
+            self.slideMenuManager1.animationDuration = TimeInterval(1.0)
         }
     }
     var rightViewController: RightViewController! {
         didSet {
             self.slideMenuManager2 = SideMenuManager(self, right: self.rightViewController)
+            self.slideMenuManager2.sideScale = 1.0 / 2.0
         }
     }
     var slideMenuManager1: SideMenuManager!

@@ -8,6 +8,7 @@
 
 class PresentationController: UIPresentationController {
     var direction: Direction = .left
+    var sideScale: CGFloat = 1.0 / 3.0
 
     // MARK: - Initializers
     override init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?) {
@@ -18,8 +19,9 @@ class PresentationController: UIPresentationController {
         var frame: CGRect = super.frameOfPresentedViewInContainerView
         switch direction {
         case .right:
-            frame.origin.x = frame.size.width / 3
-        default:
+            frame.origin.x = frame.size.width * (1 - sideScale)
+            break
+        case .left:
             break
         }
         frame.size = size(forChildContentContainer: presentedViewController, withParentContainerSize: containerView!.bounds.size)
@@ -31,7 +33,16 @@ class PresentationController: UIPresentationController {
     }
 
     override func size(forChildContentContainer container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
-        return CGSize(width: parentSize.width*(2.0/3.0), height: parentSize.height)
+        var size = CGSize.zero
+        switch direction {
+        case .left:
+            size = CGSize(width: parentSize.width * sideScale, height: parentSize.height)
+            break
+        case .right:
+            size = CGSize(width: parentSize.width, height: parentSize.height)
+            break
+        }
+        return size
     }
 
     override func presentationTransitionWillBegin() {
